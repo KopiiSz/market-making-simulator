@@ -1,6 +1,7 @@
 import numpy as np
 
-from mmsim import MarketModel, MMParams, run_simulation
+from engine import MMParams, run_simulation
+from models import MarketModel
 
 
 def test_matched_model_earns_the_spread():

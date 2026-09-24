@@ -12,7 +12,7 @@ from __future__ import annotations
 import numpy as np
 from scipy.special import ndtr
 
-from .models import MarketModel
+from models import MarketModel
 
 # ---------------------------------------------------------------------------
 # Black-Scholes

@@ -11,7 +11,7 @@ import numpy as np
 import plotly.graph_objects as go
 from plotly.subplots import make_subplots
 
-from .engine import SimResult
+from engine import SimResult
 
 TRUE = "#eb6834"
 MODEL = "#2a78d6"

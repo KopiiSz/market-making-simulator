@@ -13,8 +13,8 @@ import numpy as np
 import plotly.graph_objects as go
 from plotly.offline import get_plotlyjs_version
 
-from . import charts
-from .engine import SimResult
+import charts
+from engine import SimResult
 
 
 def _plain(obj):

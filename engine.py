@@ -24,8 +24,8 @@ from dataclasses import dataclass, field
 
 import numpy as np
 
-from .models import MarketModel, Paths, simulate_paths
-from .pricing import bs_delta, bs_implied_vol, bs_price, true_price
+from models import MarketModel, Paths, simulate_paths
+from pricing import bs_delta, bs_implied_vol, bs_price, true_price
 
 
 @dataclass(frozen=True)

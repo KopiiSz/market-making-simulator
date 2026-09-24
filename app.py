@@ -4,16 +4,21 @@ Run locally:   streamlit run app.py
 """
 from __future__ import annotations
 
+import sys
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
 import streamlit as st
 import streamlit.components.v1 as components
 
-from mmsim import (MODEL_LABELS, MarketModel, MMParams, bs_implied_vol, bs_price, horizon_returns,
-                   mm_vol, pnl_stats, run_simulation, smile, true_price)
-from mmsim import charts
-from mmsim.animation import player_html
+# the app's own modules sit next to app.py
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import charts  # noqa: E402
+from animation import player_html  # noqa: E402
+from engine import MMParams, horizon_returns, mm_vol, pnl_stats, run_simulation, smile  # noqa: E402
+from models import MODEL_LABELS, MarketModel  # noqa: E402
+from pricing import bs_implied_vol, bs_price, true_price  # noqa: E402
 
 st.set_page_config(page_title="Market Making Simulator", page_icon=":material/candlestick_chart:",
                    layout="wide", initial_sidebar_state="auto")

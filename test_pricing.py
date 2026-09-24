@@ -3,8 +3,8 @@ import math
 import numpy as np
 import pytest
 
-from mmsim import MarketModel, bs_implied_vol, bs_price, simulate_paths, true_price
-from mmsim.pricing import cf_call_price
+from models import MarketModel, simulate_paths
+from pricing import bs_implied_vol, bs_price, cf_call_price, true_price
 
 K = np.array([70.0, 90.0, 100.0, 110.0, 140.0])
 
@@ -57,7 +57,7 @@ def test_implied_vol_roundtrip():
 
 def test_merton_has_negative_skew_smile():
     """Negative mean jumps -> OTM puts carry higher implied vol than OTM calls."""
-    from mmsim import smile
+    from engine import smile
     Kg, iv, _ = smile(MarketModel("merton", jump_mean=-0.1), 0.25, True, n=11)
     assert iv[0] > iv[-1]
     assert np.all(iv > 0.2)  # jumps add variance on top of the 20% diffusion

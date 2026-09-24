@@ -2,10 +2,10 @@
 
 **Model risk in options market making: quote with Black-Scholes, trade in a world that isn't.**
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://market-making-simulator-hovs92bxwax9m6bbr3zbmk.streamlit.app)
-[![tests](https://github.com/KopiiSz/market-making-simulator/actions/workflows/tests.yml/badge.svg)](https://github.com/KopiiSz/market-making-simulator/actions/workflows/tests.yml)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR-APP-NAME.streamlit.app)
+[![tests](https://github.com/YOUR-USERNAME/market-making-simulator/actions/workflows/tests.yml/badge.svg)](https://github.com/YOUR-USERNAME/market-making-simulator/actions/workflows/tests.yml)
 
-![Market Making tab](assets/screenshot.png)
+![Market Making tab](screenshot.png)
 
 You are an options market maker. You price a rolling option with **Black-Scholes**, quote a bid and
 an ask around it, delta-hedge your book, and collect the spread. That works as long as the market
@@ -32,7 +32,7 @@ your P/L when your model is wrong.
 * **vol clustering**: Heston world. Informed traders buy when vol is high and sell when it's low.
 * **crash + vol**: Bates world: jumps *and* stochastic volatility.
 
-![Return Distributions tab](assets/distributions.png)
+![Return Distributions tab](distributions.png)
 
 ## The model
 
@@ -107,14 +107,14 @@ matched model earns the spread).
 ## Project layout
 
 ```
-app.py                 Streamlit UI
-mmsim/models.py        market models + path simulation (GBM / Merton / Heston / Bates)
-mmsim/pricing.py       Black-Scholes, implied vol, characteristic-function pricer
-mmsim/engine.py        vectorised market-making engine, P/L attribution, analytics
-mmsim/charts.py        Plotly figures
-mmsim/animation.py     client-side player (Plotly.js) for smooth playback
-tests/                 pytest suite
-.streamlit/config.toml light theme
+app.py              Streamlit UI
+models.py           market models + path simulation (GBM / Merton / Heston / Bates)
+pricing.py          Black-Scholes, implied vol, characteristic-function pricer
+engine.py           vectorised market-making engine, P/L attribution, analytics
+charts.py           Plotly figures
+animation.py        client-side player (Plotly.js) for smooth playback
+test_*.py           pytest suite
+.streamlit/config.toml  light theme
 ```
 
 ## Simplifications (on purpose)
