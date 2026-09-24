@@ -2,8 +2,8 @@
 
 **Model risk in options market making: quote with Black-Scholes, trade in a world that isn't.**
 
-[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://YOUR-APP-NAME.streamlit.app)
-[![tests](https://github.com/YOUR-USERNAME/market-making-simulator/actions/workflows/tests.yml/badge.svg)](https://github.com/YOUR-USERNAME/market-making-simulator/actions/workflows/tests.yml)
+[![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://market-making-simulator-hovs92bxwax9m6bbr3zbmk.streamlit.app)
+[![tests](https://github.com/KopiiSz/market-making-simulator/actions/workflows/tests.yml/badge.svg)](https://github.com/KopiiSz/market-making-simulator/actions/workflows/tests.yml)
 
 ![Market Making tab](assets/screenshot.png)
 
